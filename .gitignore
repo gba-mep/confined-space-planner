@@ -1,0 +1,14 @@
+# 私有倉庫，不公開
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+node_modules/
+*.log
+*.tmp
+memory/
+sessions/
+_*/
+task-summary*
