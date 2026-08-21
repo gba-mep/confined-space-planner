@@ -10,6 +10,10 @@
 
 **Compliance-ready in minutes** | **Risk assessment + Permit + Emergency plan** | **ISO 31000 aligned**
 
+![Confined Space Workflow](demo/confined_space_demo.jpg)
+
+*4-step pipeline: 4 inputs (project/space/work/requirements) → 5-step process (analyze→identify→control→write→review) → Word document → compliance check*
+
 </div>
 
 ---
