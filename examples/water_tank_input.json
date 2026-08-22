@@ -1,0 +1,25 @@
+{
+  "project_info": {
+    "name": "[Project Name] — Water Tank Cleaning & Inspection",
+    "location": "[Site Address]",
+    "contractor": "[Contractor Name]"
+  },
+  "space_description": {
+    "type": "water_tank",
+    "dimensions": "3m x 3m x 3m",
+    "location": "Rooftop, Building B, 16th floor",
+    "access": "Side manway, 700x700mm",
+    "structure": "Stainless steel, internal baffle plates",
+    "surroundings": "Near elevator machine room, non-public area"
+  },
+  "work_content": {
+    "nature": "Interior cleaning, coating inspection, valve maintenance",
+    "workers": 2,
+    "duration": "6 hours, 1 shift",
+    "materials": "High-pressure water gun, cleaning agents, inspection tools"
+  },
+  "special_requirements": {
+    "owner_requirements": "LOTO on water supply valves, biological hazard assessment required",
+    "known_hazards": ["electrocution", "fall"]
+  }
+}

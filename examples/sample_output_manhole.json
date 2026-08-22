@@ -1,0 +1,596 @@
+{
+  "project_info": {
+    "name": "[Project Name] — Cable Installation in Manhole",
+    "location": "[Site Address]",
+    "contractor": "[Contractor Name]"
+  },
+  "space_description": {
+    "type": "manhole",
+    "dimensions": "1.2m x 1.0m x 2.5m",
+    "location": "Underground utility corridor, near Building A",
+    "access": "Top opening, 600mm diameter",
+    "structure": "Concrete, vertical ladder",
+    "surroundings": "Underground utility corridor, near electrical room"
+  },
+  "work_content": {
+    "nature": "Cable installation and splicing",
+    "workers": 3,
+    "duration": "4 hours, 1 shift",
+    "materials": "Power cables, splicing tools, portable lighting"
+  },
+  "hazard_assessment": {
+    "hazards": [
+      {
+        "name": "Hydrogen Sulfide (H₂S > 10 ppm)",
+        "category": "atmospheric",
+        "source": "Sulfate-reducing bacteria, sewage decomposition",
+        "scenarios": "Sewers, sewage treatment tanks, manholes",
+        "severity": 5,
+        "likelihood": 4,
+        "key": "H2S",
+        "risk_score": 20,
+        "risk_level": "Extreme",
+        "risk_action": "Do not proceed. Must eliminate risk before re-assessment.",
+        "risk_color": "FF0000",
+        "severity_label": "Catastrophic",
+        "likelihood_label": "Likely"
+      },
+      {
+        "name": "Oxygen Deficiency (O₂ < 19.5%)",
+        "category": "atmospheric",
+        "source": "Biological respiration, oxidation reactions",
+        "scenarios": "Long-sealed spaces, decaying organic matter consuming oxygen",
+        "severity": 5,
+        "likelihood": 4,
+        "key": "oxygen_deficiency",
+        "risk_score": 20,
+        "risk_level": "Extreme",
+        "risk_action": "Do not proceed. Must eliminate risk before re-assessment.",
+        "risk_color": "FF0000",
+        "severity_label": "Catastrophic",
+        "likelihood_label": "Likely"
+      },
+      {
+        "name": "Drowning",
+        "category": "physical",
+        "source": "Water ingress, liquid accumulation",
+        "scenarios": "Tank cleaning, drainage pipe work",
+        "severity": 5,
+        "likelihood": 3,
+        "key": "drowning",
+        "risk_score": 15,
+        "risk_level": "Extreme",
+        "risk_action": "Do not proceed. Must eliminate risk before re-assessment.",
+        "risk_color": "FF0000",
+        "severity_label": "Catastrophic",
+        "likelihood_label": "Possible"
+      },
+      {
+        "name": "Carbon Monoxide (CO > 25 ppm)",
+        "category": "atmospheric",
+        "source": "Incomplete combustion, engine exhaust",
+        "scenarios": "Generator proximity, welding fumes",
+        "severity": 5,
+        "likelihood": 3,
+        "key": "CO",
+        "risk_score": 15,
+        "risk_level": "Extreme",
+        "risk_action": "Do not proceed. Must eliminate risk before re-assessment.",
+        "risk_color": "FF0000",
+        "severity_label": "Catastrophic",
+        "likelihood_label": "Possible"
+      },
+      {
+        "name": "Fall from Height (> 2m)",
+        "category": "physical",
+        "source": "Deep shafts without fall protection",
+        "scenarios": "Manholes, vertical pipe shafts",
+        "severity": 4,
+        "likelihood": 3,
+        "key": "fall",
+        "risk_score": 12,
+        "risk_level": "High",
+        "risk_action": "Requires advanced control measures + project manager approval.",
+        "risk_color": "FF6600",
+        "severity_label": "Severe",
+        "likelihood_label": "Possible"
+      },
+      {
+        "name": "Engulfment / Burial",
+        "category": "physical",
+        "source": "Material collapse, unstable surroundings",
+        "scenarios": "Unbraced soil, underground pipe work",
+        "severity": 5,
+        "likelihood": 2,
+        "key": "engulfment",
+        "risk_score": 10,
+        "risk_level": "High",
+        "risk_action": "Requires advanced control measures + project manager approval.",
+        "risk_color": "FF6600",
+        "severity_label": "Catastrophic",
+        "likelihood_label": "Unlikely"
+      }
+    ],
+    "legal_definition": [
+      "Explosion (flammable gas/dust exceeds safe limits)",
+      "Oxygen deficiency (O₂ < 19.5%)",
+      "Poisoning (toxic gas exceeds exposure limits)",
+      "Drowning (liquid ingress/accumulation)",
+      "High temperature (extreme environmental heat)",
+      "High pressure (residual pressure in pipes/containers)"
+    ],
+    "gas_standards": {
+      "O2": {
+        "safe_range": "19.5% - 23.5%",
+        "danger_low": 19.5,
+        "danger_high": 23.5,
+        "unit": "%"
+      },
+      "CO": {
+        "safe_range": "≤ 25 ppm",
+        "danger_threshold": 25,
+        "unit": "ppm"
+      },
+      "H2S": {
+        "safe_range": "≤ 10 ppm",
+        "danger_threshold": 10,
+        "unit": "ppm"
+      },
+      "LEL": {
+        "safe_range": "≤ 10%",
+        "danger_threshold": 10,
+        "unit": "%"
+      },
+      "VOC": {
+        "safe_range": "Substance-specific",
+        "danger_threshold": null,
+        "unit": "varies"
+      }
+    },
+    "ventilation_requirement": {
+      "space_volume_m3": 3.0,
+      "required_airflow_m3h": 60.0,
+      "air_changes_per_hour": 20,
+      "min_ventilation_time_min": 30,
+      "recommended_equipment": "Portable axial fan"
+    },
+    "situation": {
+      "space_type": "manhole",
+      "is_confirmed_confined": true,
+      "legal_definition": "Space presents one or more of 6 statutory dangers",
+      "primary_hazards": [
+        "H2S",
+        "oxygen_deficiency",
+        "drowning"
+      ],
+      "secondary_hazards": [
+        "CO",
+        "fall",
+        "engulfment"
+      ],
+      "all_hazards": [
+        "H2S",
+        "oxygen_deficiency",
+        "drowning",
+        "CO",
+        "fall",
+        "engulfment"
+      ]
+    }
+  },
+  "control_measures": [
+    {
+      "hazard_key": "H2S",
+      "engineering": [
+        "Ventilation ≥ 30 min before entry",
+        "Isolate sewage sources (LOTO on valves)"
+      ],
+      "administrative": [
+        "Gas monitoring: H₂S alarm at >5 ppm, evacuate at >10 ppm",
+        "No solo entry — attendant required",
+        "Emergency rescue plan with SCBA rescue team"
+      ],
+      "ppe": [
+        "SCBA if H₂S > 10 ppm",
+        "Gas detector with H₂S sensor on each entrant"
+      ]
+    },
+    {
+      "hazard_key": "oxygen_deficiency",
+      "engineering": [
+        "Mechanical ventilation ≥ 30 min before entry",
+        "Continuous ventilation during occupancy",
+        "Calculated airflow: volume × 20 air changes/hour"
+      ],
+      "administrative": [
+        "Continuous gas monitoring (O₂ alarm at <20% or >23%)",
+        "Attendant stationed outside at all times",
+        "Entry permit valid for one shift only"
+      ],
+      "ppe": [
+        "SCBA (Self-Contained Breathing Apparatus) if O₂ < 19.5%"
+      ]
+    },
+    {
+      "hazard_key": "drowning",
+      "engineering": [
+        "Isolate water sources (LOTO on valves, blank off pipes)",
+        "Dewatering pump on standby",
+        "Float switch alarm for water level"
+      ],
+      "administrative": [
+        "Attendant monitors for water ingress",
+        "Emergency evacuation at first sign of rising water"
+      ],
+      "ppe": [
+        "Life jacket",
+        "Full-body harness + lifeline for extraction"
+      ]
+    },
+    {
+      "hazard_key": "CO",
+      "engineering": [
+        "Eliminate combustion sources near entry (relocate generators)",
+        "Ventilation ≥ 30 min before entry"
+      ],
+      "administrative": [
+        "Gas monitoring: CO alarm at >15 ppm, evacuate at >25 ppm",
+        "Attendant stationed outside"
+      ],
+      "ppe": [
+        "SCBA if CO > 25 ppm",
+        "Gas detector with CO sensor"
+      ]
+    },
+    {
+      "hazard_key": "fall",
+      "engineering": [
+        "Install tripod + davit at entry point",
+        "Guardrail around opening",
+        "Secure ladder inside space"
+      ],
+      "administrative": [
+        "Fall protection plan for entries > 2m depth",
+        "Attendant monitors entrant's harness line"
+      ],
+      "ppe": [
+        "Full-body harness",
+        "Lifeline (rope) connected to tripod",
+        "Safety helmet with chin strap"
+      ]
+    },
+    {
+      "hazard_key": "engulfment",
+      "engineering": [
+        "Shoring/bracing for unstable material",
+        "Isolate material feed sources"
+      ],
+      "administrative": [
+        "No entry if material instability detected",
+        "Continuous monitoring of surrounding stability"
+      ],
+      "ppe": [
+        "Full-body harness + lifeline",
+        "Safety helmet"
+      ]
+    }
+  ],
+  "permit": {
+    "conditions": [
+      "Risk assessment completed",
+      "LOTO executed (if applicable)",
+      "Ventilation ≥ 30 min and gas readings safe",
+      "All entrants received TBT (Toolbox Talk)",
+      "Attendant is in position",
+      "Communication equipment tested and working",
+      "PPE inspected and donned",
+      "Rescue equipment in position",
+      "Explosion-proof lighting in position (if applicable)",
+      "Entry/exit log prepared",
+      "Emergency plan communicated to all personnel",
+      "Work scope confirmed — no scope creep"
+    ],
+    "safety_measures": [
+      "Confirm space is a confined space",
+      "Risk assessment completed",
+      "Work permit issued",
+      "Competent person designated",
+      "Workers trained (TBT received)",
+      "Pre-entry ventilation ≥ 30 min",
+      "Continuous gas monitoring established",
+      "Ventilation equipment running continuously",
+      "LOTO executed (if applicable)",
+      "Attendant stationed outside",
+      "Communication equipment in position",
+      "Emergency rescue equipment in position",
+      "Rescue personnel on standby",
+      "PPE equipped and inspected",
+      "Entry/exit registration system established",
+      "Explosion-proof lighting in position (if applicable)",
+      "Post-work: confirm all personnel evacuated"
+    ]
+  },
+  "compliance_report": {
+    "sections": [
+      {
+        "section_id": "risk_assessment",
+        "regulation": "§161 — Risk Assessment Report",
+        "items": [
+          {
+            "item": "Work location description complete (type/dimensions/location/access)",
+            "status": "pass"
+          },
+          {
+            "item": "All 4 hazard dimensions identified (atmospheric/physical/chemical/structural)",
+            "status": "pass"
+          },
+          {
+            "item": "Risk assessment method clear (matrix formula)",
+            "status": "pass"
+          },
+          {
+            "item": "Risk levels correctly determined",
+            "status": "pass"
+          },
+          {
+            "item": "Control measures cover all identified hazards",
+            "status": "pass"
+          },
+          {
+            "item": "Emergency plan includes rescue procedures and contacts",
+            "status": "fail"
+          },
+          {
+            "item": "Assessor signature field complete",
+            "status": "pass"
+          }
+        ],
+        "section_passed": 6,
+        "section_total": 7
+      },
+      {
+        "section_id": "work_permit",
+        "regulation": "§163 — Work Permit",
+        "items": [
+          {
+            "item": "Work content and scope clearly defined",
+            "status": "pass"
+          },
+          {
+            "item": "Validity period reasonable (max one shift)",
+            "status": "pass"
+          },
+          {
+            "item": "Permit conditions confirmed item-by-item (12 items)",
+            "status": "pass"
+          },
+          {
+            "item": "Issuer is a competent person",
+            "status": "pass"
+          },
+          {
+            "item": "Receiver is a designated person",
+            "status": "pass"
+          }
+        ],
+        "section_passed": 5,
+        "section_total": 5
+      },
+      {
+        "section_id": "safety_measures",
+        "regulation": "§165 — Safety Measures (17 items)",
+        "items": [
+          {
+            "item": "Space confirmed as confined space",
+            "status": "pass"
+          },
+          {
+            "item": "Risk assessment completed",
+            "status": "pass"
+          },
+          {
+            "item": "Work permit issued",
+            "status": "pass"
+          },
+          {
+            "item": "Competent person designated",
+            "status": "pass"
+          },
+          {
+            "item": "Workers trained (TBT received)",
+            "status": "pass"
+          },
+          {
+            "item": "Pre-entry ventilation ≥ 30 min",
+            "status": "pass"
+          },
+          {
+            "item": "Continuous gas monitoring established",
+            "status": "pass"
+          },
+          {
+            "item": "Ventilation equipment running continuously",
+            "status": "pass"
+          },
+          {
+            "item": "LOTO executed (if applicable)",
+            "status": "pass"
+          },
+          {
+            "item": "Attendant stationed outside",
+            "status": "pass"
+          },
+          {
+            "item": "Communication equipment in position",
+            "status": "pass"
+          },
+          {
+            "item": "Emergency rescue equipment in position",
+            "status": "fail"
+          },
+          {
+            "item": "Rescue personnel on standby",
+            "status": "fail"
+          },
+          {
+            "item": "PPE equipped and inspected",
+            "status": "pass"
+          },
+          {
+            "item": "Entry/exit registration system established",
+            "status": "pass"
+          },
+          {
+            "item": "Explosion-proof lighting in position (if applicable)",
+            "status": "pass"
+          },
+          {
+            "item": "Post-work: all personnel evacuated confirmation",
+            "status": "pass"
+          }
+        ],
+        "section_passed": 15,
+        "section_total": 17
+      },
+      {
+        "section_id": "personnel",
+        "regulation": "§166-167 — Personnel Qualification",
+        "items": [
+          {
+            "item": "Competent person qualification certificate valid",
+            "status": "pass"
+          },
+          {
+            "item": "Entrant training records complete",
+            "status": "pass"
+          },
+          {
+            "item": "Attendant duties clearly communicated",
+            "status": "pass"
+          }
+        ],
+        "section_passed": 3,
+        "section_total": 3
+      },
+      {
+        "section_id": "underground",
+        "regulation": "§168-172 — Underground Work (if applicable)",
+        "items": [
+          {
+            "item": "Earth support design approved",
+            "status": "pass"
+          },
+          {
+            "item": "Groundwater control measures in place",
+            "status": "pass"
+          },
+          {
+            "item": "Adjacent structure protection assessed",
+            "status": "pass"
+          },
+          {
+            "item": "Enhanced ventilation meets requirements",
+            "status": "pass"
+          }
+        ],
+        "section_passed": 4,
+        "section_total": 4
+      },
+      {
+        "section_id": "safety_management",
+        "regulation": "Safety Management Manual A.2.5",
+        "items": [
+          {
+            "item": "Risk assessment complete",
+            "status": "pass"
+          },
+          {
+            "item": "Safety measures specific and actionable",
+            "status": "pass"
+          },
+          {
+            "item": "Emergency plan feasible",
+            "status": "pass"
+          },
+          {
+            "item": "Personnel training plan included",
+            "status": "pass"
+          },
+          {
+            "item": "Supervision system clearly defined",
+            "status": "pass"
+          }
+        ],
+        "section_passed": 5,
+        "section_total": 5
+      },
+      {
+        "section_id": "inspection",
+        "regulation": "Safety Management Manual C.1.8",
+        "items": [
+          {
+            "item": "Attendant present and not multitasking",
+            "status": "pass"
+          },
+          {
+            "item": "Continuous ventilation operational",
+            "status": "pass"
+          },
+          {
+            "item": "Gas monitoring continuous",
+            "status": "pass"
+          },
+          {
+            "item": "O₂ in 19.5-23.5% range",
+            "status": "pass"
+          },
+          {
+            "item": "Flammable gas < 10% LEL",
+            "status": "pass"
+          },
+          {
+            "item": "Toxic gases within limits",
+            "status": "pass"
+          },
+          {
+            "item": "Communication working",
+            "status": "fail"
+          },
+          {
+            "item": "Rescue equipment in position",
+            "status": "fail"
+          }
+        ],
+        "section_passed": 6,
+        "section_total": 8
+      }
+    ],
+    "total_items": 49,
+    "passed": 44,
+    "failed": 5,
+    "pass_rate": "44/49 (89.8%)",
+    "overall_status": "CONDITIONAL PASS",
+    "improvement_suggestions": [
+      {
+        "section": "§161 — Risk Assessment Report",
+        "missing_items": [
+          "Emergency plan includes rescue procedures and contacts"
+        ]
+      },
+      {
+        "section": "§165 — Safety Measures (17 items)",
+        "missing_items": [
+          "Emergency rescue equipment in position",
+          "Rescue personnel on standby"
+        ]
+      },
+      {
+        "section": "Safety Management Manual C.1.8",
+        "missing_items": [
+          "Communication working",
+          "Rescue equipment in position"
+        ]
+      }
+    ]
+  }
+}

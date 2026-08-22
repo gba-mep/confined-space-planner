@@ -1,0 +1,25 @@
+{
+  "project_info": {
+    "name": "[Project Name] — Cable Installation in Manhole",
+    "location": "[Site Address]",
+    "contractor": "[Contractor Name]"
+  },
+  "space_description": {
+    "type": "manhole",
+    "dimensions": "1.2m x 1.0m x 2.5m",
+    "location": "Underground utility corridor, near Building A",
+    "access": "Top opening, 600mm diameter",
+    "structure": "Concrete, vertical ladder",
+    "surroundings": "Underground utility corridor, near electrical room"
+  },
+  "work_content": {
+    "nature": "Cable installation and splicing",
+    "workers": 3,
+    "duration": "4 hours, 1 shift",
+    "materials": "Power cables, splicing tools, portable lighting"
+  },
+  "special_requirements": {
+    "owner_requirements": "Gas monitoring every 30 min, rescue team on standby",
+    "known_hazards": ["H2S", "oxygen_deficiency"]
+  }
+}

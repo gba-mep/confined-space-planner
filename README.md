@@ -60,37 +60,61 @@ Project info + Space description + Work content + Special requirements
 git clone https://github.com/David-CB666/confined-space-planner.git
 cd confined-space-planner
 pip install -r requirements.txt
+
+# Generate a plan from example input
+python generate_plan.py --input examples/manhole_input.json --output plan.docx --matrix
 ```
 
-Provide 4 categories of information:
+Output:
+```
+[1/5] Situation analysis...      ✓ Space type: manhole, 6 hazards identified
+[2/5] Hazard identification...   ✓ H₂S: score=20 (Extreme), O₂: score=20 (Extreme)
+[3/5] Control measures...       ✓ 41 measures across 6 hazards
+[4/5] Document writing...        ✓ 8-chapter Word doc assembled
+[5/5] Compliance review...       ✓ 44/49 passed (89.8%) — CONDITIONAL PASS
+```
 
-```python
-project_info = {
-    "name": "[Project Name]",
-    "location": "[Site Address]",
-    "contractor": "[Contractor Name]",
-}
+### Create Your Own Input
 
-space_description = {
-    "type": "manhole",  # or "water_tank", "pipe", "duct"
-    "dimensions": "1.2m × 1.0m × 2.5m",
-    "access": "top opening, 600mm diameter",
+```json
+{
+  "project_info": {
+    "name": "Your Project — Cable Installation",
+    "location": "Site Address",
+    "contractor": "Contractor Name"
+  },
+  "space_description": {
+    "type": "manhole",
+    "dimensions": "1.2m x 1.0m x 2.5m",
+    "access": "top opening, 600mm",
     "structure": "concrete",
-    "surroundings": "underground utility corridor",
-}
-
-work_content = {
+    "surroundings": "underground corridor"
+  },
+  "work_content": {
     "nature": "cable installation",
     "workers": 3,
     "duration": "4 hours",
-    "materials": "cables, tools, lighting",
-}
-
-special_requirements = {
+    "materials": "cables, tools, lighting"
+  },
+  "special_requirements": {
     "owner_requirements": "gas monitoring every 30 min",
-    "known_hazards": "possible H2S, low oxygen",
+    "known_hazards": ["H2S", "oxygen_deficiency"]
+  }
 }
 ```
+
+```bash
+python generate_plan.py --input your_input.json --output your_plan.docx --json
+```
+
+### CLI Options
+
+| Flag | Description |
+|------|-------------|
+| `--input, -i` | Path to input JSON file (required) |
+| `--output, -o` | Output .docx path (default: confined_space_plan.docx) |
+| `--json` | Also export plan data as JSON |
+| `--matrix` | Print risk matrix to console |
 
 ## 5-Step Pipeline
 
@@ -135,6 +159,44 @@ Pre-built hazard categories:
 - Underground utility corridor work
 - Duct and shaft work
 - Any confined space operation requiring safety documentation
+
+## Example Outputs
+
+| Example | Space Type | Hazards | Controls | Compliance |
+|---------|-----------|---------|----------|-----------|
+| [manhole_input.json](examples/manhole_input.json) | Manhole | 6 (H₂S, O₂, drowning, CO, fall, engulfment) | 41 measures | 44/49 (89.8%) |
+| [water_tank_input.json](examples/water_tank_input.json) | Water tank | 5 (O₂, electrocution, fall, biological, drowning) | 40 measures | 44/49 (89.8%) |
+
+```bash
+# Try the examples
+python generate_plan.py --input examples/manhole_input.json --output manhole_plan.docx
+python generate_plan.py --input examples/water_tank_input.json --output water_tank_plan.docx
+```
+
+## Project Structure
+
+```
+confined-space-planner/
+├── generate_plan.py              # Main CLI entry point
+├── lib/
+│   ├── hazard_matcher.py         # Step 1-2: Space analysis + hazard identification
+│   ├── risk_calculator.py        # Step 2: ISO 31000 risk matrix + ventilation calc
+│   ├── control_generator.py      # Step 3: Engineering/administrative/PPE measures
+│   ├── compliance_checker.py     # Step 5: 49-item regulatory checklist
+│   └── doc_builder.py            # Step 4: Word document assembly (8 chapters)
+├── examples/
+│   ├── manhole_input.json        # Example: manhole cable installation
+│   └── water_tank_input.json     # Example: water tank cleaning
+├── references/                   # Knowledge base (hazard library, regulations, templates)
+│   ├── hazard-library.md
+│   ├── control-measures.md
+│   ├── regulations-summary.md
+│   ├── document-templates.md
+│   ├── compliance-checklist.md
+│   ├── input-requirements.md
+│   └── process-flow.md
+└── requirements.txt              # python-docx
+```
 
 ## License
 
