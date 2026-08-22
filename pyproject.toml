@@ -1,7 +1,7 @@
 [project]
 name = "confined-space-planner"
 version = "1.0.0"
-description = "密閉空間施工計劃生成器（澳門法規）"
+description = "Confined space construction plan generator (ISO 31000 aligned)"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
