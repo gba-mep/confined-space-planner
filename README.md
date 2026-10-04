@@ -11,14 +11,11 @@
 
 **Compliance-ready in minutes** | **Risk assessment + Permit + Emergency plan** | **ISO 31000 aligned**
 
-![Confined Space Planner — Workflow & Output Preview](demo/confined_space_demo_v2.png)
-
 *5-step pipeline: Input JSON → Hazard Match (19 types) → Risk Matrix (5×5 ISO 31000) → Control Measures (engineering/administrative/PPE) → Word Document (8 chapters) + 49-item compliance check*
 
 </div>
 
 ---
-
 
 > **🔒 Demo data notice** — the preview image, the JSON files under [`examples/`](examples/) and the generated Word samples all use **fictional project data** (placeholder site names, generic dimensions). No real permit numbers, client names or site locations are published here. No real site photographs are used.
 ## The Problem
