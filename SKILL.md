@@ -1,12 +1,12 @@
 ﻿---
 name: confined-space-planner
-triggers: ["密閉空間", "密閉空間施工計劃", "confined space", "危險評估報告", "工作許可證", "密閉空間安全", "沙井作業", "儲水缸作業", "管道作業", "密閉空間風險評估", "施工安全計劃"]
-description: 密閉空間施工計劃生成器。觸發詞：密閉空間、密閉空間施工計劃、confined
-  space、危險評估報告、工作許可證、密閉空間安全、沙井作業、儲水缸作業、管道作業、密閉空間風險評估、施工安全計劃。基於[當地安全法規]、CEM承建商安全管理手冊及ISO
-  31000，自動生成合法、合規的《密閉空間施工計劃》，涵蓋風險評估、許可證、安全措施、緊急救援全流程。
+triggers: ["密闭空间", "密闭空间施工计划", "confined space", "危险评估报告", "工作许可证", "密闭空间安全", "沙井作业", "储水缸作业", "管道作业", "密闭空间风险评估", "施工安全计划"]
+description: 密闭空间施工计划生成器。触发词：密闭空间、密闭空间施工计划、confined
+  space、危险评估报告、工作许可证、密闭空间安全、沙井作业、储水缸作业、管道作业、密闭空间风险评估、施工安全计划。基于[当地安全法规]、CEM承建商安全管理手册及ISO
+  31000，自动生成合法、合规的《密闭空间施工计划》，涵盖风险评估、许可证、安全措施、紧急救援全流程。
 version: 1.0.0
 icon: ⛑️
-author: David-CB666
+author: gba-mep
 metadata:
   clawdbot:
     requires:
@@ -17,56 +17,56 @@ metadata:
 disable: true
 ---
 
-# 密閉空間施工計劃生成器
+# 密闭空间施工计划生成器
 
-> 自動生成符合安全法規的密閉空間施工計劃，涵蓋風險評估 → 許可證 → 安全措施 → 應急預案。
+> 自动生成符合安全法规的密闭空间施工计划，涵盖风险评估 → 许可证 → 安全措施 → 应急预案。
 
-## 快速開始
+## 快速开始
 
-提供以下 4 類信息，即可自動生成完整計劃：
+提供以下 4 类信息，即可自动生成完整计划：
 
-1. **項目信息** — 名稱 / 地點 / 承建商
-2. **空間描述** — 類型 / 尺寸 / 出入口 / 結構 / 周邊環境
-3. **工作內容** — 性質 / 人數 / 工時 / 物料設備
-4. **特殊要求** — 業主要求 / 已知危害
+1. **项目信息** — 名称 / 地点 / 承建商
+2. **空间描述** — 类型 / 尺寸 / 出入口 / 结构 / 周边环境
+3. **工作内容** — 性质 / 人数 / 工时 / 物料设备
+4. **特殊要求** — 业主要求 / 已知危害
 
-## 法規依據
+## 法规依据
 
-| 法規 | 用途 |
+| 法规 | 用途 |
 |:-----|:-----|
-| [當地安全法規] §161-172 | 法定定義、危險評估、許可證、17項安全措施 |
-| [安全管理手冊] A.2.5/C.1.8 | 項目級標準、合資格人員、檢查清單 |
-| ISO 31000 + 密閉空間風險指南 | 風險矩陣、危害識別、控制措施層級 |
+| [当地安全法规] §161-172 | 法定定义、危险评估、许可证、17项安全措施 |
+| [安全管理手册] A.2.5/C.1.8 | 项目级标准、合资格人员、检查清单 |
+| ISO 31000 + 密闭空间风险指南 | 风险矩阵、危害识别、控制措施层级 |
 
-## 處理流程（5 步）
+## 处理流程（5 步）
 
 ```
-用戶輸入 → 情境分析 → 危害識別 → 控制措施生成 → 文檔撰寫 → 合規審查 → 輸出 docx
+用户输入 → 情境分析 → 危害识别 → 控制措施生成 → 文档撰写 → 合规审查 → 输出 docx
 ```
 
-## 輸出文檔結構
+## 输出文档结构
 
-封面 → 編制依據 → 工程概况 → 危險評估報告 → 工作許可證 → 安全措施 → 應急預案 → 附件
+封面 → 编制依据 → 工程概况 → 危险评估报告 → 工作许可证 → 安全措施 → 应急预案 → 附件
 
-## 詳細文檔索引
+## 详细文档索引
 
-| 文檔 | 內容 |
+| 文档 | 内容 |
 |:-----|:-----|
-| [references/input-requirements.md](references/input-requirements.md) | 用戶輸入規範（4 類 12 項參數） |
-| [references/process-flow.md](references/process-flow.md) | 5 步處理流程詳細分解 |
-| [references/regulations-summary.md](references/regulations-summary.md) | 法規摘要（[法規編號]、CEM、ISO 31000） |
-| [references/hazard-library.md](references/hazard-library.md) | 危害識別庫 + 氣體容忍標準 + 風險矩陣 |
-| [references/control-measures.md](references/control-measures.md) | 控制措施庫（工程/行政/PPE/緊急救援） |
-| [references/document-templates.md](references/document-templates.md) | 3 套文檔模板結構 |
-| [references/compliance-checklist.md](references/compliance-checklist.md) | 合規檢查清單 |
+| [references/input-requirements.md](references/input-requirements.md) | 用户输入规范（4 类 12 项参数） |
+| [references/process-flow.md](references/process-flow.md) | 5 步处理流程详细分解 |
+| [references/regulations-summary.md](references/regulations-summary.md) | 法规摘要（[法规编号]、CEM、ISO 31000） |
+| [references/hazard-library.md](references/hazard-library.md) | 危害识别库 + 气体容忍标准 + 风险矩阵 |
+| [references/control-measures.md](references/control-measures.md) | 控制措施库（工程/行政/PPE/紧急救援） |
+| [references/document-templates.md](references/document-templates.md) | 3 套文档模板结构 |
+| [references/compliance-checklist.md](references/compliance-checklist.md) | 合规检查清单 |
 
-## 參考文件
+## 参考文件
 
-> 以下文件為本技能的法規依據，存放於用戶本地，技能本身不附帶文件內容。
+> 以下文件为本技能的法规依据，存放于用户本地，技能本身不附带文件内容。
 
-| 文件 | 說明 |
+| 文件 | 说明 |
 |:-----|:-----|
-| [當地安全法規] | [當地安全法規]《建築業職業安全健康法例》§161-172 |
-| 密閉空間風險指南 | [勞工部門]《密閉空間工作是全指南》 |
-| 密閉空間作業指引 | 密閉空間作業安全作業指引 |
-| [安全管理手冊] | [Safety Management Manual] (A.2.5/C.1.8) |
+| [当地安全法规] | [当地安全法规]《建筑业职业安全健康法例》§161-172 |
+| 密闭空间风险指南 | [劳工部门]《密闭空间工作是全指南》 |
+| 密闭空间作业指引 | 密闭空间作业安全作业指引 |
+| [安全管理手册] | [Safety Management Manual] (A.2.5/C.1.8) |
