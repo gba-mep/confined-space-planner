@@ -1,4 +1,4 @@
-﻿---
+---
 name: confined-space-planner
 triggers: ["密闭空间", "密闭空间施工计划", "confined space", "危险评估报告", "工作许可证", "密闭空间安全", "沙井作业", "储水缸作业", "管道作业", "密闭空间风险评估", "施工安全计划"]
 description: 密闭空间施工计划生成器。触发词：密闭空间、密闭空间施工计划、confined
