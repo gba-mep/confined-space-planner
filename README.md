@@ -7,7 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Part of the MEP Automation Toolkit](https://img.shields.io/badge/Toolkit-MEP%20automation-1565C0?logo=github&logoColor=white)](https://github.com/David-CB666)
+[![Part of the MEP Automation Toolkit](https://img.shields.io/badge/Toolkit-MEP%20automation-1565C0?logo=github&logoColor=white)](https://github.com/gba-mep)
 
 **Compliance-ready in minutes** | **Risk assessment + Permit + Emergency plan** | **ISO 31000 aligned**
 
@@ -60,7 +60,7 @@ Project info + Space description + Work content + Special requirements
 ## Quick Start
 
 ```bash
-git clone https://github.com/David-CB666/confined-space-planner.git
+git clone https://github.com/gba-mep/confined-space-planner.git
 cd confined-space-planner
 pip install -r requirements.txt
 
@@ -207,7 +207,7 @@ MIT License — see [LICENSE](LICENSE)
 
 ## Sponsor
 
-If this tool saved you time, consider [sponsoring](https://github.com/sponsors/David-CB666) the project.
+If this tool saved you time, consider [sponsoring](https://github.com/sponsors/gba-mep) the project.
 
 <div align="center">
 
@@ -219,11 +219,11 @@ If this tool saved you time, consider [sponsoring](https://github.com/sponsors/D
 
 ## Related repositories
 
-Part of the **[MEP & construction document automation toolkit](https://github.com/David-CB666)** — open-source tools built from real jobsite workflows.
+Part of the **[MEP & construction document automation toolkit](https://github.com/gba-mep)** — open-source tools built from real jobsite workflows.
 
-- **Handbook** — [ai-agent-manual](https://github.com/David-CB666/ai-agent-manual) (8-level AI cultivation for engineers)
-- **Document generation** — [material-approval-pipeline](https://github.com/David-CB666/material-approval-pipeline) · [material-submittal-generator](https://github.com/David-CB666/material-submittal-generator) · [excel-template-filler](https://github.com/David-CB666/excel-template-filler) · [python-docx-photo-grid](https://github.com/David-CB666/python-docx-photo-grid) · [daily-construction-log](https://github.com/David-CB666/daily-construction-log) · [officecli-workflow](https://github.com/David-CB666/officecli-workflow)
-- **Engineering calculation** — [lighting-lux-calculator](https://github.com/David-CB666/lighting-lux-calculator) · [ups-discharge-time-calculator](https://github.com/David-CB666/ups-discharge-time-calculator) · [gantt-chart-pro](https://github.com/David-CB666/gantt-chart-pro) · [electrical-test-report-generator](https://github.com/David-CB666/electrical-test-report-generator)
-- **CAD & drawings** — [electrical-panel-label-plates](https://github.com/David-CB666/electrical-panel-label-plates)
-- **Data & OCR** — [ocr-skill](https://github.com/David-CB666/ocr-skill) · [VBA-Macro-Reader-v2.0.0](https://github.com/David-CB666/VBA-Macro-Reader-v2.0.0)
-- **Compliance & AI ops** — [skill-router](https://github.com/David-CB666/skill-router) · [consulting-services](https://github.com/David-CB666/consulting-services)
+- **Handbook** — [ai-agent-manual](https://github.com/gba-mep/ai-agent-manual) (8-level AI cultivation for engineers)
+- **Document generation** — [material-approval-pipeline](https://github.com/gba-mep/material-approval-pipeline) · [material-submittal-generator](https://github.com/gba-mep/material-submittal-generator) · [excel-template-filler](https://github.com/gba-mep/excel-template-filler) · [python-docx-photo-grid](https://github.com/gba-mep/python-docx-photo-grid) · [daily-construction-log](https://github.com/gba-mep/daily-construction-log) · [officecli-workflow](https://github.com/gba-mep/officecli-workflow)
+- **Engineering calculation** — [lighting-lux-calculator](https://github.com/gba-mep/lighting-lux-calculator) · [ups-discharge-time-calculator](https://github.com/gba-mep/ups-discharge-time-calculator) · [gantt-chart-pro](https://github.com/gba-mep/gantt-chart-pro) · [electrical-test-report-generator](https://github.com/gba-mep/electrical-test-report-generator)
+- **CAD & drawings** — [electrical-panel-label-plates](https://github.com/gba-mep/electrical-panel-label-plates)
+- **Data & OCR** — [ocr-skill](https://github.com/gba-mep/ocr-skill) · [VBA-Macro-Reader-v2.0.0](https://github.com/gba-mep/VBA-Macro-Reader-v2.0.0)
+- **Compliance & AI ops** — [路由规则](https://github.com/gba-mep/路由规则) · [consulting-services](https://github.com/gba-mep/consulting-services)
